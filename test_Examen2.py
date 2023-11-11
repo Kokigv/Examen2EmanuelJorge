@@ -32,9 +32,3 @@ def test2_ObtieneMasBailable():
 def test2_VerificaListaCanciones():
     assert objeto2.VerificaListaCanciones(objeto2.listaCanciones) == True
 
-######################################################################################################
-
-######################################################################################################
-
-def test_Encuentra():
-    assert objeto.Encuentra([1,2,23,4],4) == True

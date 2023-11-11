@@ -26,8 +26,18 @@ class MiClase:
             return False
         return True
     
+    def Encuentra(self, Lista, elemento):
+        if Lista == [] or elemento == '':
+            return False
+        else:
+            return self.aux_Encuentra(Lista, elemento)
 
-
+    def aux_Encuentra(self, Lista, elemento):
+            if Lista[0] == elemento:
+                return True
+            else:
+                return self.aux_Encuentra(Lista[1:], elemento)
+            
 ################################################################################################
 #Ejemplo de ejecución
 # Crear un objeto de la clase MiClase
@@ -37,3 +47,4 @@ print(objeto.ObtieneValencia(1234567))  # Debería imprimir 4
 print(objeto.DivisibleTempo(10))  # Debería imprimir [1, 2, 5, 10]
 print(objeto.ObtieneMasBailable([0.8, 0.9, 0.7]))  # Debería imprimir 0.9
 print(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]))  # Debería imprimir True
+print(objeto.Encuentra([1,2,23,4],4))
