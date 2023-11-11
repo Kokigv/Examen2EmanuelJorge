@@ -13,3 +13,22 @@ def test_ObtieneMasBailable():
 
 def test_VerificaListaCanciones():
     assert objeto.VerificaListaCanciones(objeto.listaCanciones) == True
+######################################################################################################
+
+######################################################################################################
+
+
+objeto2 = MiClase(1234567, 2, 1254673, ["Odiame", "Pa mi", "Talvez"], [0.8, 0.9, 0.7])
+
+def test2_ObtieneValencia():
+    assert objeto2.ObtieneValencia(objeto2.Valencia) == 4
+
+def test2_DivisibleTempo():
+    assert objeto2.DivisibleTempo(objeto2.Tempo) == [1, 2]
+
+def test2_ObtieneMasBailable():
+    assert objeto2.ObtieneMasBailable(objeto2.listaBailabilidad) == 0.9
+
+def test2_VerificaListaCanciones():
+    assert objeto2.VerificaListaCanciones(objeto2.listaCanciones) == True
+
